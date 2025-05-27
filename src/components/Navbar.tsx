@@ -1,8 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import styles from '../styles/home.module.css';
 
 interface DropdownProps {
   title: string;
@@ -16,7 +16,7 @@ const Dropdown = ({ title, items }: DropdownProps) => {
     <div className="relative inline-block">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900"
+        className="flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-200"
       >
         {title}
         <svg
@@ -49,14 +49,14 @@ const Dropdown = ({ title, items }: DropdownProps) => {
 
 export default function Navbar() {
   return (
-    <nav className="bg-white shadow-md">
+    <nav className={`shadow-md ${styles.navbar}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             {/* Logo placeholder */}
             <div className="flex-shrink-0 flex items-center">
-              <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-gray-500">Logo</span>
+              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                <span className="text-white">Logo</span>
               </div>
             </div>
 
@@ -66,15 +66,15 @@ export default function Navbar() {
                 title="My First Robot"
                 items={['Demo', 'Assembly', 'Modules']}
               />
-              <div className="border-l border-gray-200 h-6 my-auto mx-2" />
+              <div className="border-l border-white/20 h-6 my-auto mx-2" />
               <Dropdown
                 title="Community Projects"
                 items={['Code', 'Models']}
               />
-              <div className="border-l border-gray-200 h-6 my-auto mx-2" />
+              <div className="border-l border-white/20 h-6 my-auto mx-2" />
               <Link
                 href="/about"
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900"
+                className="px-3 py-2 text-sm font-medium text-white hover:text-gray-200"
               >
                 About
               </Link>
@@ -85,7 +85,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link
               href="/signin"
-              className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
+              className="px-4 py-2 text-sm font-medium bg-white text-[rgb(0,62,65)] rounded-md hover:bg-gray-100"
             >
               Sign in
             </Link>
