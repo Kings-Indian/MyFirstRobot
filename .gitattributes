@@ -1,3 +1,4 @@
 public/models/MyFirstRobot.gltf/ filter=lfs diff=lfs merge=lfs -text
 public/models/MyFirstRobot.gltf filter=lfs diff=lfs merge=lfs -text
+src/components/test.gltf filter=lfs diff=lfs merge=lfs -text
 *.gltf filter=lfs diff=lfs merge=lfs -text
